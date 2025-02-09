@@ -190,14 +190,21 @@ src="https://www.facebook.com/tr?id=1103592521048958&ev=PageView&noscript=1"
         </div>
     </div>
 
-          <script>
-        setTimeout(() => {
-            let botao = document.getElementById("botao");
-            botao.classList.remove("bloqueado");
-            botao.classList.add("habilitado");
-            botao.textContent = "DESBLOQUEAR AGORA";
-            botao.removeAttribute("disabled");
-        }, 60000); // 60 segundos (1 minuto)
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("desbloquearBotao");
+    button.disabled = true;
+    button.style.backgroundColor = "#ccc";
+    button.innerText = "Assista para desbloquear";
+
+    setTimeout(() => {
+      button.disabled = false;
+      button.style.backgroundColor = "#530082";
+      button.innerText = "DESBLOQUEAR AGORA";
+    }, 60000); // 1 minuto
+  });
+</script>
+
     </script>
   
 
